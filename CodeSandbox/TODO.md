@@ -1,0 +1,4 @@
+- [ ] Install gh-pages as dev dependency
+- [ ] Add deploy script to package.json
+- [ ] Build the project
+- [ ] Deploy to GitHub Pages
