@@ -509,7 +509,17 @@ console.log('Modal interactivo cargado');`,
     
     <div class="spinner-box">
       <div class="spinner spinner-4"></div>
-      <p>Bars</p>
+      <p>Loading Bar</p>
+    </div>
+    
+    <div class="spinner-box">
+      <div class="spinner spinner-5"></div>
+      <p>Waves</p>
+    </div>
+    
+    <div class="spinner-box">
+      <div class="spinner spinner-6"></div>
+      <p>Rings</p>
     </div>
   </div>
 </div>`,
@@ -579,7 +589,7 @@ h1 {
   position: absolute;
   width: 12px;
   height: 12px;
-  background: #BB9AF7;
+  background: #F7768E;
   border-radius: 50%;
   animation: bounce 1.4s infinite ease-in-out both;
 }
@@ -597,12 +607,12 @@ h1 {
 .spinner-3 {
   width: 50px;
   height: 50px;
-  background: #9ECE6A;
+  background: #BB9AF7;
   border-radius: 50%;
   animation: pulse 1.2s ease-in-out infinite;
 }
 
-/* Spinner 4 - Bars */
+/* Spinner 4 - Loading Bar */
 .spinner-4 {
   width: 60px;
   height: 50px;
@@ -616,12 +626,62 @@ h1 {
   content: '';
   width: 12px;
   height: 100%;
-  background: #F7768E;
+  background: #9ECE6A;
   animation: bars 1s ease-in-out infinite;
 }
 
 .spinner-4::before {
   animation-delay: -0.4s;
+}
+
+/* Spinner 5 - Waves */
+.spinner-5 {
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+
+.spinner-5::before,
+.spinner-5::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 3px solid #FF9E64;
+  border-radius: 50%;
+  animation: waves 2s infinite ease-in-out;
+}
+
+.spinner-5::after {
+  animation-delay: -1s;
+}
+
+/* Spinner 6 - Rings */
+.spinner-6 {
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+
+.spinner-6::before,
+.spinner-6::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 3px solid transparent;
+  border-top: 3px solid #F7768E;
+  border-radius: 50%;
+  animation: rings 1.5s infinite linear;
+}
+
+.spinner-6::after {
+  width: 70%;
+  height: 70%;
+  top: 15%;
+  left: 15%;
+  animation-direction: reverse;
+  animation-duration: 1s;
 }
 
 @keyframes spin {
