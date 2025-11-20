@@ -31,10 +31,7 @@ jobs:
         run: npm ci
         working-directory: ./CodeSandbox
       
-      - name: Copy src to CodeSandbox
-        run: |
-          rm -rf CodeSandbox/src
-          cp -r src CodeSandbox/src
+      # ⬇️ SE ELIMINÓ EL PASO "Copy src to CodeSandbox" ⬇️
       
       - name: Build project
         run: npm run build
